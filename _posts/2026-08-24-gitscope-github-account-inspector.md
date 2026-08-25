@@ -33,9 +33,15 @@ GitHub 个人主页会展示仓库、关注者和简介，但有些公开信息�
 
 输入一个 GitHub 用户名后，GitScope 会展示以下公开信息。
 
+![GitScope 查询 Bingwithyou 的完整结果：账户资料、注册时间、数字用户 ID、统计信息与代表仓库](/assets/img/gitscope/gitscope-result-overview.png)
+_输入 `Bingwithyou` 后的完整查询结果_
+
 ### 1. GitHub 注册时间与账户年龄
 
 页面会读取账户的 `created_at` 字段，显示完整注册日期，并计算账户从注册到现在经历的天数。用户也可以把天数切换为年数，更直观地了解一个 GitHub 账户存在了多久。
+
+![GitScope 显示的账户注册时间与年龄：2018 年 4 月 30 日，共 3038 天，约合 8.3 年](/assets/img/gitscope/gitscope-account-age.png)
+_注册时间与账户年龄_
 
 如果你只是想查询“GitHub 账号注册时间”，这也是 GitScope 最直接的使用场景。
 
@@ -48,6 +54,9 @@ GitHub 用户名可以修改，但数字用户 ID 更适合持续识别同一个
 - 对应的复制按钮和字段说明。
 
 GitHub 官方文档也说明了数字 ID 可用于查询账户，而 `login` 可能随时间改变。相关字段可以在 [REST API 用户接口文档](https://docs.github.com/en/rest/users/users#get-a-user)中查看。
+
+![GitScope 显示的数字用户 ID 38858402、Node ID 与账户统计](/assets/img/gitscope/gitscope-ids.png)
+_数字用户 ID、Node ID 与账户统计_
 
 ### 3. 公开资料与账户统计
 
@@ -69,6 +78,9 @@ GitHub 官方文档也说明了数字 ID 可用于查询账户，而 `login` 可
 选择逻辑会优先排除 Fork；如果没有原创仓库，则回退到全部公开仓库。候选仓库会按照 Star 数量排序，Star 相同时再比较 Fork 数量。每张仓库卡片会展示名称、描述、主要语言、Star 和 Fork。
 
 这不是一个复杂的“开发者评分”，而是帮助访问者快速了解账户公开作品的轻量摘要。
+
+![GitScope 展示的 Bingwithyou 代表仓库列表，按 Star 数量排序](/assets/img/gitscope/gitscope-repositories.png)
+_按 Star 排序的代表仓库_
 
 ## 纯前端架构：不需要服务器
 
