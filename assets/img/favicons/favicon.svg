@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Bingwithyou">
+  <rect width="512" height="512" rx="72" fill="#1f1f1c"/>
+  <rect x="34" y="34" width="444" height="444" rx="50" fill="none" stroke="#69675f" stroke-width="2"/>
+  <text x="256" y="354" fill="#f5f3ed" font-family="Georgia, 'Times New Roman', serif" font-size="300" text-anchor="middle">B</text>
+  <circle cx="405" cy="107" r="12" fill="#8a4545"/>
+</svg>
