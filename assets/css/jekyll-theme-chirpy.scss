@@ -1,0 +1,29 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* Keep the comment area inside the content column around Chirpy's xl breakpoint. */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #main-wrapper > .container #tail-wrapper {
+    flex: 0 0 91.666667%;
+    max-width: 91.666667%;
+  }
+}
+
+/* Prevent the third-party comment iframe from widening its parent. */
+#tail-wrapper .giscus,
+#tail-wrapper .giscus-frame {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0;
+}
