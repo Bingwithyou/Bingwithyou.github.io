@@ -17,6 +17,9 @@ image:
 >
 > 项目源码：[Bingwithyou/Aurora-Passgen](https://github.com/Bingwithyou/Aurora-Passgen)
 
+![Aurora 随机密码生成器实机界面，展示生成结果、强度、快速模板和字符规则](/assets/img/aurora-passgen/aurora-random.png)
+_Aurora 主界面的实际运行效果。本文截图中的密码仅作演示，请勿用于真实账号。_
+
 ## 从“生成一串字符”到适配实际规则
 
 密码生成器的核心操作很简单：选择长度，点击生成，再复制使用。真正麻烦的地方，往往是各个网站对密码的要求不同：有的要求同时包含大小写字母、数字和符号，有的只接受少数特殊符号，还有的要求第一位必须是字母。
@@ -53,6 +56,9 @@ Harbor-Velvet-Cricket-Maple-73
 
 这里的单词来自随机抽取。短语的强度取决于词库规模、单词数量和附加随机部分，不能仅凭字符串看起来很长来判断；分隔符和固定的大小写转换也不会凭空增加随机性。
 
+![密码短语模式实机截图，展示四个随机单词、分隔符和附加数字选项](/assets/img/aurora-passgen/aurora-passphrase.png)
+_切换到密码短语模式后，可调整单词数量、分隔符和附加项。_
+
 ### 自定义格式：让每个位置遵循模板
 
 如果目标系统有明确的格式要求，可以使用模板模式。例如：
@@ -74,6 +80,9 @@ Aaaa-####-$$$$
 | `*` | 当前启用的全部字符 |
 
 普通连字符等内容会原样保留；如果想输出占位符本身，可以用反斜杠转义。固定文字只决定格式，不增加随机性。
+
+![自定义模板模式实机截图，展示 Aaaa-####-$$$$ 模板及对应生成结果](/assets/img/aurora-passgen/aurora-pattern.png)
+_模板中的占位符决定每一段的字符类型，生成结果会即时显示在上方。_
 
 ## 随机数从哪里来
 
@@ -106,6 +115,9 @@ Aurora 界面还提供可选的 30 秒剪贴板自动清理。它依赖页面继
 
 除了生成功能，我也给这个项目做了四套视觉风格。首页可以选择界面，各个主题也能返回首页切换。
 
+![Aurora PassGen 首页实机截图，展示 Aurora、Terminal、Glass 和 Brutalist 四种界面入口](/assets/img/aurora-passgen/aurora-themes.png)
+_首页的四套界面入口：预览卡片展示各自的视觉风格。_
+
 | 界面 | 视觉特点 |
 |---|---|
 | [Aurora · 极简卡片](https://bingwithyou.github.io/Aurora-Passgen/aurora.html) | 卡片布局，密码字符按类型着色，支持深浅色切换 |
@@ -114,6 +126,9 @@ Aurora 界面还提供可选的 30 秒剪贴板自动清理。它依赖页面继
 | [Brutalist · 新粗野主义](https://bingwithyou.github.io/Aurora-Passgen/demos/brutalist.html) | 粗描边、硬阴影与高饱和撞色 |
 
 四套界面共用生成引擎和交互控制层，具体展示的控件可以不同。Terminal 中的命令行是对当前配置的可视化表达，项目本身没有提供需要安装的 `passgen` 命令。
+
+![Terminal 终端主题实机截图，展示荧光绿界面、模板配置和生成结果](/assets/img/aurora-passgen/aurora-terminal.png)
+_Terminal 主题的实际页面：同一套生成逻辑，以终端风格呈现。_
 
 页面支持中英文切换。重新生成时，字符会原位翻滚，再从左到右定格；如果系统启用了减少动态效果，生成动画会跳过。在启用快捷键的界面中，还可以按 `R` 重新生成、按 `C` 复制，编辑输入框时不会触发这些快捷键。
 
